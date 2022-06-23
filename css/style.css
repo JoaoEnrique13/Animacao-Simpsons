@@ -1,0 +1,320 @@
+@font-face {/*Importar fonte*/
+    font-family: 'Simpson';
+    src: url('../fonts/Simpsonfont DEMO.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} 
+
+body
+{/*degrade fundo*/
+    background-image: linear-gradient(to right, dodgerblue, #ffdd00);
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1
+{/*Texto*/
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: 'Simpson';
+    font-size: 50px;
+    color: #ffdd00;
+    word-spacing: 20px;
+}
+
+.alinhar-cabeca
+{
+    width: 200px;
+    height: 200px;
+    transform: rotate(-20deg);
+    justify-content: flex-end!important;
+    display: flex;
+}
+
+.cabeca
+{/*cabeça*/
+    background: #ffdd00;
+    height: 380px;
+    width: 100%;
+    position: absolute;
+    z-index: -999;
+    border-radius: 100px 100px 90px 90px;
+    border: 1px solid #000;
+}
+
+.container
+{/*Container para alinhar o desenho*/
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.cabelo
+{
+    border-top: 2px solid #000;
+    height: 150px;
+    width: 120px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 9999;
+    top: 34%;
+    margin: 0;
+    transform: rotate(-20deg);
+}
+
+.cabelo:nth-child(1n)
+{/*Fio de cabelo*/
+    margin-left: -45px;
+}
+
+.cabelo:nth-child(2n)
+{/*Fio de cabelo*/
+    margin-left: 15px;
+}
+
+.cabelo-m
+{/*Fio de cabelo em forma de M (/)*/
+    border-left: 2px solid #000;
+    height: 50px;
+    width: 120px;
+    transform: rotate(20deg);
+    top: 50%;
+    position: absolute;
+    left: -14px;
+}
+
+.cabelo-m:nth-child(2n)
+{/*Fio de cabelo em forma de M (\)*/
+    transform: rotate(-20deg);
+    top: 30%;
+    left: 4px;
+}
+
+.cabelo-m:nth-child(3n)
+{/*Fio de cabelo em forma de M (/)*/
+    transform: rotate(20deg);
+    left: 21px!important;
+}
+
+.cabelo-m:nth-child(4n)
+{/*Fio de cabelo em forma de M (\)*/
+    transform: rotate(-20deg);
+    top: 30%;
+    left: 38px;
+}
+
+.olho
+{/*Olho branco*/
+    height: 100px;
+    width: 100px;
+    background: #fff;
+    border-radius: 50%;
+    margin-top: 130px;
+    border: 1px solid #000;
+    position: absolute;
+    margin-left: 20px!important;
+    overflow: hidden!important;
+}
+
+.olho-1
+{/*Primeiro olho branco*/
+   margin-left: 80px!important;
+}
+
+.olho-2
+{/*Segundo olho branco*/
+    z-index: 999;
+}
+
+.row
+{/*Row pra alinhar olho e dentes*/
+    flex-direction: row;
+    display: flex;
+}
+
+.olho-preto
+{/*bola do olho preto*/
+    background: #000;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    margin-left: 50px;
+    margin-top: 45px;
+    animation: olhar 4s infinite alternate;
+}
+
+.nariz
+{
+    background: #ffdd00;
+    border-right: 1px solid #000;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    border-radius: 0 50px 50px 0;
+    height: 30px;
+    width: 100px;
+    margin-top: 210px;
+    margin-left: 95px;
+    position: absolute;
+    z-index: 990;
+}
+
+.boca
+{/*boca grande (marrom)*/
+    background: #d1b281;
+    width: 90%;
+    height: 130px;
+    margin: 240px 0 0 0;
+    border-radius: 50% 40% 40% 50%;
+    border: 1px solid #000;
+}
+
+.boca1
+{/*booca pequena*/
+    width: 50%;
+    height: 0px;
+    margin: 55px 0 0 90px;
+    border-radius: 20% 0 0 50%;
+    border-top: 1px solid #000;
+    animation: boca 1s infinite alternate;
+}
+
+.orelha
+{
+    background: #ffdd00;
+    height: 30px;
+    width: 20px;
+    border-radius: 50% 0 0 50%;
+    position: absolute;
+    top: 160px;
+    left: -10px;
+    border-left: 1px solid #000;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.orelha-1
+{/*linha da orelha*/
+    border: 1px solid #000;
+    width: 35%;
+    height: 1px;
+    border-radius: 50px;
+    transform: rotate(20deg)
+}
+
+.dente:hover, .cabeca:hover .dente, .cabeca:hover .dente
+{/*Mostra dente ao passar o mouse Dente*/
+    border: 1px solid #000;
+    height: 90%;
+}
+
+.dente:nth-child(2n):hover, .cabeca:hover .dente:nth-child(2n){/*Segunda linha do dente*/
+	height: 98%;
+}
+
+.dente:nth-child(3n):hover, .cabeca:hover .dente:nth-child(3n){/*terceira linha do dente*/
+	height: 85%;
+}
+
+.boca1:hover, .cabeca:hover .boca1
+{/*abrir boca ao passar o mouse Dente*/
+    justify-content: space-around;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
+    height: 50%;
+    border-radius: 20% 0 55% 50%;
+    margin-left: 89px;
+    display: flex;
+    background: #fff;
+}
+
+ .fechar-olho:hover, .cabeca:hover .fechar-olho
+{/*div que fecha o olho*/
+    background: #ffdd00;
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    border-radius: 50% 50% 0 0;
+    border-bottom: 1px solid #000;
+    
+}
+
+.fechar-olho
+{
+    animation: piscar 4s infinite alternate;
+}
+
+
+
+/*Animacoes CSS*/
+@keyframes piscar
+{/*animacao pra piscar*/
+    0%{
+        background: transparent;
+        height: 0%;
+        width: 90%;
+        position: absolute;
+        border: 0;
+        z-index: 9999;
+    }
+
+    70%{
+        background: transparent;
+        height: 0%;
+        width: 90%;
+        position: absolute;
+        border:0;
+    }
+
+    85%{
+        background: #ffdd00;
+        height: 0%;
+        width: 100%;
+        position: absolute;
+        border-radius: 50% 50% 0 0;
+        border-bottom: 1px solid #000;
+    }
+
+    90%{
+        background: #ffdd00;
+        height: 0%;
+        width: 100%;
+        position: absolute;
+        border-radius: 50% 50% 0 0;
+        border-bottom: 1px solid #000;
+    }
+
+    100%{
+        background: #ffdd00;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        border-radius: 50% 50% 0 0;
+        border-bottom: 1px solid #000;
+        z-index: 99;
+    }
+}
+
+@keyframes olhar 
+{/*animacao pra mexer o olho*/
+    0%
+    {
+        transform: translatex(-20px);
+    }
+
+    100%
+    {
+        transform:  translatex(20px);
+    }
+}
